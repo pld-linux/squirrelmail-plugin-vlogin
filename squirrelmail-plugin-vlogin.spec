@@ -3,13 +3,14 @@ Summary:	Plugin that makes virtual hosting a possibility, automatically
 Summary(pl):	Wtyczka pozwalaj±ca na u¿ywanie wirtualnych hostów
 Name:		squirrelmail-plugin-%{_plugin}
 Version:	3.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.squirrelmail.org/plugins/%{_plugin}-%{version}-1.2.7.tar.gz
 # Source0-md5:	db20600be5d7a56fbadb220296dfef38
 URL:		http://www.squirrelmail.org/
-Requires:	squirrelmail >= 1.4
+Requires:	squirrelmail >= 1.4.3a-8
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_plugindir %{_datadir}/squirrelmail/plugins/%{_plugin}
@@ -59,20 +60,31 @@ pozosta³e mo¿na wy³±czyæ.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_plugindir}/data
+install -d $RPM_BUILD_ROOT{%{_plugindir}/data,%{_sysconfdir}/squirrelmail}
 
 install *.php $RPM_BUILD_ROOT%{_plugindir}
 install data/*.php $RPM_BUILD_ROOT%{_plugindir}/data
-install data/config.php.sample $RPM_BUILD_ROOT%{_plugindir}/data/config.php
+install data/config.php.sample $RPM_BUILD_ROOT%{_sysconfdir}/squirrelmail/%{name}-config.php
+
+ln -sf %{_sysconfdir}/squirrelmail/%{name}-config.php $RPM_BUILD_ROOT%{_plugindir}/data/config.php
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%triggerpostun -- squirrelmail-plugin-%{_plugin} < 3.5-3
+if [ -f /home/services/httpd/html/squirrel/plugins/vlogin/data/config.php.rpmsave ]; then
+	echo "Moving old config file to %{_sysconfdir}/squirrelmail/%{name}-config.php"
+	mv -f %{_sysconfdir}/squirrelmail/%{name}-config.php %{_sysconfdir}/squirrelmail/%{name}-config.php.rpmnew
+	mv -f /home/services/httpd/html/squirrel/plugins/vlogin/data/config.php.rpmsave \
+		%{_sysconfdir}/squirrelmail/%{name}-config.php
+fi
+
 %files
 %defattr(644,root,root,755)
 %doc INSTALL README data/*.sample data/*.typical
-%config(noreplace) %verify(not size mtime md5) %{_plugindir}/data/config.php
+%attr(640,root,http) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/squirrelmail/%{name}-config.php
 %dir %{_plugindir}
 %{_plugindir}/*.php
 %dir %{_plugindir}/data
 %{_plugindir}/data/index.php
+%{_plugindir}/data/config.php
