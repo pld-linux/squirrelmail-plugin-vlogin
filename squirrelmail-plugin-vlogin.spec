@@ -18,19 +18,18 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This plugin allows you to use just one SquirrelMail installation to
 host web mail for multiple domains. It is highly configurable, and
 allows such things as:
-
- - allow users to log in with just "jose" when in fact their IMAP login
-   might be something like "jose@domain.com"
- - show a different image on the login page for each of your domains
- - change most any SquirrelMail configuration setting on a per-domain
-   basis (or even per-user!)
- - access a sendmail-style virtual users table
- - change IMAP servers (or any other settings) on a per-domain (or even
-   on a per-user) basis
- - enable or disable certain plugins on a per-domain basis
- - dealiasing of Qmail/Vpopmail aliased domains
- - domain name translation
- - much more...
+- allow users to log in with just "jose" when in fact their IMAP login
+  might be something like "jose@domain.com"
+- show a different image on the login page for each of your domains
+- change most any SquirrelMail configuration setting on a per-domain
+  basis (or even per-user!)
+- access a sendmail-style virtual users table
+- change IMAP servers (or any other settings) on a per-domain (or even
+  on a per-user) basis
+- enable or disable certain plugins on a per-domain basis
+- dealiasing of Qmail/Vpopmail aliased domains
+- domain name translation
+- much more...
 
 Note that if you only need some of these features, the others may be
 turned off.
@@ -39,19 +38,18 @@ turned off.
 Ta wtyczka pozwala u¿ywaæ jednej instalacji SquirrelMaila do
 hostowania poczty na WWW dla wielu domen. Jest wysoko konfigurowalna i
 pozwala na rzeczy takie jak:
-
- - umo¿liwienie u¿ytkownikom logowania samym "jose" w przypadku kiedy
-   pe³ny login dla IMAP-a to co¶ w rodzaju "jose@domena.com"
- - pokazywanie innego obrazka na stronie tytu³owej dla ka¿dej z domen
- - zmianê wiêkszo¶ci ustawieñ w konfiguracji SquirrelMaila w
-   zale¿no¶ci od domeny (lub nawet u¿ytkownika!)
- - dostêp do tabeli wirtualnych u¿ytkowników w stylu sendmaila
- - zmianê serwerów IMAP (lub innych ustawieñ) w zale¿no¶ci od domeny
-   (lub nawet u¿ytkownika)
- - w³±czenie lub wy³±czenie ró¿nych wtyczek w zale¿no¶ci od domeny
- - rozwijanie aliasów z domen aliasów Qmaila/Vpopmaila
- - t³umaczenie nazw domen
- - i inne...
+- umo¿liwienie u¿ytkownikom logowania samym "jose" w przypadku kiedy
+  pe³ny login dla IMAP-a to co¶ w rodzaju "jose@domena.com"
+- pokazywanie innego obrazka na stronie tytu³owej dla ka¿dej z domen
+- zmianê wiêkszo¶ci ustawieñ w konfiguracji SquirrelMaila w
+  zale¿no¶ci od domeny (lub nawet u¿ytkownika!)
+- dostêp do tabeli wirtualnych u¿ytkowników w stylu sendmaila
+- zmianê serwerów IMAP (lub innych ustawieñ) w zale¿no¶ci od domeny
+  (lub nawet u¿ytkownika)
+- w³±czenie lub wy³±czenie ró¿nych wtyczek w zale¿no¶ci od domeny
+- rozwijanie aliasów z domen aliasów Qmaila/Vpopmaila
+- t³umaczenie nazw domen
+- i inne...
 
 Warto zauwa¿yæ, ¿e je¶li potrzebna jest tylko czê¶æ tych mo¿liwo¶ci,
 pozosta³e mo¿na wy³±czyæ.
