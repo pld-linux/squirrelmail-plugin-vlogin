@@ -46,7 +46,7 @@ pozwala na rzeczy takie jak:
  - zmianê wiêkszo¶ci ustawieñ w konfiguracji SquirrelMaila w
    zale¿no¶ci od domeny (lub nawet u¿ytkownika!)
  - dostêp do tabeli wirtualnych u¿ytkowników w stylu sendmaila
- - zmienê serwerów IMAP (lub innych ustawieñ) w zale¿no¶ci od domeny
+ - zmianê serwerów IMAP (lub innych ustawieñ) w zale¿no¶ci od domeny
    (lub nawet u¿ytkownika)
  - w³±czenie lub wy³±czenie ró¿nych wtyczek w zale¿no¶ci od domeny
  - rozwijanie aliasów z domen aliasów Qmaila/Vpopmaila
