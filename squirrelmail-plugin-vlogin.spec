@@ -2,17 +2,17 @@
 Summary:	Plugin that makes virtual hosting a possibility, automatically
 Summary(pl):	Wtyczka pozwalaj±ca na u¿ywanie wirtualnych hostów
 Name:		squirrelmail-plugin-%{_plugin}
-Version:	3.2
+Version:	3.3
 Release:	1
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://www.squirrelmail.org/plugins/%{_plugin}-%{version}.tar.gz
-# Source0-md5:	69c212a64a1f643b4e468e1f4a2de114
+# Source0-md5:	b7461594d6a78626599ec7e8969f07f1
 URL:		http://www.squirrelmail.org/
 Requires:	squirrelmail
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_plugindir	/home/services/httpd/html/squirrel/plugin/%{_plugin}
+%define		_plugindir	/home/services/httpd/html/squirrel/plugins/%{_plugin}
 
 %description
 This plugin allows you to use just one SquirrelMail installation to
@@ -73,8 +73,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc INSTALL README data/*.sample data/*.typical
+%config(noreplace) %verify(not size mtime md5) %{_plugindir}/data/config.php
 %dir %{_plugindir}
 %{_plugindir}/*.php
 %dir %{_plugindir}/data
 %{_plugindir}/data/index.php
-%config(noreplace) %verify(not size mtime md5) %{_plugindir}/data/config.php
