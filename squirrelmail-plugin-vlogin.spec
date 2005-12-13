@@ -42,8 +42,8 @@ pozwala na rzeczy takie jak:
 - umo¿liwienie u¿ytkownikom logowania samym "jose" w przypadku kiedy
   pe³ny login dla IMAP-a to co¶ w rodzaju "jose@domena.com"
 - pokazywanie innego obrazka na stronie tytu³owej dla ka¿dej z domen
-- zmianê wiêkszo¶ci ustawieñ w konfiguracji SquirrelMaila w
-  zale¿no¶ci od domeny (lub nawet u¿ytkownika!)
+- zmianê wiêkszo¶ci ustawieñ w konfiguracji SquirrelMaila w zale¿no¶ci
+  od domeny (lub nawet u¿ytkownika!)
 - dostêp do tabeli wirtualnych u¿ytkowników w stylu sendmaila
 - zmianê serwerów IMAP (lub innych ustawieñ) w zale¿no¶ci od domeny
   (lub nawet u¿ytkownika)
@@ -82,7 +82,7 @@ fi
 %files
 %defattr(644,root,root,755)
 %doc INSTALL README data/*.sample data/*.typical
-%attr(640,root,http) %config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/squirrelmail/%{name}-config.php
+%attr(640,root,http) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/squirrelmail/%{name}-config.php
 %dir %{_plugindir}
 %{_plugindir}/*.php
 %dir %{_plugindir}/data
