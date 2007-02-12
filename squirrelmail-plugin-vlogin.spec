@@ -1,6 +1,6 @@
 %define		_plugin	vlogin
 Summary:	Plugin that makes virtual hosting a possibility, automatically
-Summary(pl):	Wtyczka pozwalaj±ca na u¿ywanie wirtualnych hostów
+Summary(pl.UTF-8):   Wtyczka pozwalajÄ…ca na uÅ¼ywanie wirtualnych hostÃ³w
 Name:		squirrelmail-plugin-%{_plugin}
 Version:	3.5
 Release:	3
@@ -36,25 +36,25 @@ allows such things as:
 Note that if you only need some of these features, the others may be
 turned off.
 
-%description -l pl
-Ta wtyczka pozwala u¿ywaæ jednej instalacji SquirrelMaila do
+%description -l pl.UTF-8
+Ta wtyczka pozwala uÅ¼ywaÄ‡ jednej instalacji SquirrelMaila do
 hostowania poczty na WWW dla wielu domen. Jest wysoko konfigurowalna i
 pozwala na rzeczy takie jak:
-- umo¿liwienie u¿ytkownikom logowania samym "jose" w przypadku kiedy
-  pe³ny login dla IMAP-a to co¶ w rodzaju "jose@domena.com"
-- pokazywanie innego obrazka na stronie tytu³owej dla ka¿dej z domen
-- zmianê wiêkszo¶ci ustawieñ w konfiguracji SquirrelMaila w zale¿no¶ci
-  od domeny (lub nawet u¿ytkownika!)
-- dostêp do tabeli wirtualnych u¿ytkowników w stylu sendmaila
-- zmianê serwerów IMAP (lub innych ustawieñ) w zale¿no¶ci od domeny
-  (lub nawet u¿ytkownika)
-- w³±czenie lub wy³±czenie ró¿nych wtyczek w zale¿no¶ci od domeny
-- rozwijanie aliasów z domen aliasów Qmaila/Vpopmaila
-- t³umaczenie nazw domen
+- umoÅ¼liwienie uÅ¼ytkownikom logowania samym "jose" w przypadku kiedy
+  peÅ‚ny login dla IMAP-a to coÅ› w rodzaju "jose@domena.com"
+- pokazywanie innego obrazka na stronie tytuÅ‚owej dla kaÅ¼dej z domen
+- zmianÄ™ wiÄ™kszoÅ›ci ustawieÅ„ w konfiguracji SquirrelMaila w zaleÅ¼noÅ›ci
+  od domeny (lub nawet uÅ¼ytkownika!)
+- dostÄ™p do tabeli wirtualnych uÅ¼ytkownikÃ³w w stylu sendmaila
+- zmianÄ™ serwerÃ³w IMAP (lub innych ustawieÅ„) w zaleÅ¼noÅ›ci od domeny
+  (lub nawet uÅ¼ytkownika)
+- wÅ‚Ä…czenie lub wyÅ‚Ä…czenie rÃ³Å¼nych wtyczek w zaleÅ¼noÅ›ci od domeny
+- rozwijanie aliasÃ³w z domen aliasÃ³w Qmaila/Vpopmaila
+- tÅ‚umaczenie nazw domen
 - i inne...
 
-Warto zauwa¿yæ, ¿e je¶li potrzebna jest tylko czê¶æ tych mo¿liwo¶ci,
-pozosta³e mo¿na wy³±czyæ.
+Warto zauwaÅ¼yÄ‡, Å¼e jeÅ›li potrzebna jest tylko czÄ™Å›Ä‡ tych moÅ¼liwoÅ›ci,
+pozostaÅ‚e moÅ¼na wyÅ‚Ä…czyÄ‡.
 
 %prep
 %setup -q -n %{_plugin}
