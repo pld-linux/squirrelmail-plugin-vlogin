@@ -1,6 +1,6 @@
 %define		_plugin	vlogin
 Summary:	Plugin that makes virtual hosting a possibility, automatically
-Summary(pl.UTF-8):   Wtyczka pozwalająca na używanie wirtualnych hostów
+Summary(pl.UTF-8):	Wtyczka pozwalająca na używanie wirtualnych hostów
 Name:		squirrelmail-plugin-%{_plugin}
 Version:	3.5
 Release:	3
